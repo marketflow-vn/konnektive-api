@@ -1,0 +1,35 @@
+{
+  "name": "fitboxmedia/konnektive-api",
+  "description": "A PHP implementation of the Konnektive CRM v2 API",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Rzavyalov",
+      "email": "zavyalovroman@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "ext-curl": "*",
+    "php": ">=7.1.3",
+    "illuminate/validation": "5.7.*",
+    "illuminate/translation": "5.7.*",
+    "illuminate/container": "5.7.*",
+    "illuminate/database": "5.7.*",
+    "fzaninotto/faker": "^1.8"
+  },
+  "require-dev": {
+    "phpunit/phpunit": ">=7.3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Konnektive\\": "src/",
+      "Konnektive\\Tests\\": "tests/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/TestCase.php"
+    ]
+  }
+}
