@@ -1,5 +1,5 @@
 {
-  "name": "fitboxmedia/konnektive-api",
+  "name": "marketflow-vn/konnektive-api",
   "description": "A PHP implementation of the Konnektive CRM v2 API",
   "license": "MIT",
   "authors": [
@@ -7,15 +7,20 @@
       "name": "Rzavyalov",
       "email": "zavyalovroman@gmail.com",
       "role": "Developer"
+    },
+    {
+      "name": "An Ho",
+      "email": "an.ho1991@gmail.com",
+      "role": "Developer"
     }
   ],
   "require": {
     "ext-curl": "*",
     "php": ">=7.1.3",
-    "illuminate/validation": "5.7.*",
-    "illuminate/translation": "5.7.*",
-    "illuminate/container": "5.7.*",
-    "illuminate/database": "5.7.*",
+    "illuminate/validation": "9.*",
+    "illuminate/translation": "9.*",
+    "illuminate/container": "9.*",
+    "illuminate/database": "9.*",
     "fzaninotto/faker": "^1.8"
   },
   "require-dev": {
