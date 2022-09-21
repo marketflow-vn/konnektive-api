@@ -15,12 +15,17 @@ class CurlHandler implements IHandler
      */
     public function handle(Request $request)
     {
+        echo 'May muon cai gi tao???';
         //open connection
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         $data = $request->toArray();
-
+        echo 'bo may la data day';
+var_dump($data); 
+$verb = $request->getVerb();
+echo 'ditmemay api a';
+var_dump($verb); 
         switch ($request->getVerb()) {
             case "POST":
                 curl_setopt($ch, CURLOPT_URL, $request->getUrl());
@@ -33,11 +38,16 @@ class CurlHandler implements IHandler
         }
 
         $result = curl_exec($ch);
+        echo "may toi so roi\n";
+        var_dump(curl_error($ch)); 
+        var_dump($ch); 
         curl_close($ch);
+        echo "thua\n";
 
         if (json_decode($result)) {
             return new Response($result);
         } else {
+
             $response = new Response("");
             $response->result = "FAILURE";
             $response->raw = $result;

@@ -49,8 +49,9 @@ class Dispatcher
      */
     public function handle(Request $request)
     {
-        $request->validate();
-
+        // $request->validate();
+echo 'deohieu?';
+echo $request;
         return $this->getHandler()->handle($request);
     }
 }
