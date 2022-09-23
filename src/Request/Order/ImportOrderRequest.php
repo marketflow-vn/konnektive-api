@@ -36,6 +36,17 @@ class ImportOrderRequest extends Request
     protected $rules = [
         'loginId'            => 'required|max:32',
         'password'           => 'required|max:32',
+        'address1'           => 'required|max:50',
+        'city'               => 'required|max:30',
+        'country'            => 'required|max:2', // 2 character ISO country code
+        'emailAddress'       => 'required|max:50',
+        'firstName'          => 'required|max:50',
+        'lastName'           => 'required|max:50',
+        'ipAddress'          => 'max:15',
+        'postalCode'         => 'required|max:20',
+        'state'              => 'required|max:6',
+        'errorRedirectsTo'   => 'max:300',
+        'redirectsTo'        => 'max:300',
         'orderId'            => 'max:30',
         'billShipSame'       => 'boolean',
         'paySource'          => 'required|in:CREDITCARD,PREPAID,CHECK,ACCTONFILE,COD,DIRECTDEBIT',
@@ -49,7 +60,7 @@ class ImportOrderRequest extends Request
         'campaignId'         => 'required|numeric',
         'product1_id'        => 'required|numeric',
         'product1_qty'       => 'numeric',
-        'sessionId'          => 'required|max:32',
+        'sessionId'          => 'max:40',
         'product1_price'     => 'numeric',
         'product1_shipPrice' => 'numeric',
     ];
