@@ -98,13 +98,13 @@ abstract class Request extends Model
     private function _applyCustomValidationRules(Factory &$validator)
     {
         $validator->extend('creditcard', function ($attribute, $value, $formats) {
-            $testCard = Config::get('test_cards');
-            $allTestCards = explode(',', $testCard);
-            if (is_array($allTestCards)) {
-                if (in_array($value, $allTestCards)) {
-                    return true;
-                }
+            $testCards = Config::get('test_cards') ?? "";
+            $testCards = explode(',', $testCards);
+
+            if (!empty($testCards) && in_array($value, $testCards)) {
+                return true;
             }
+
             //Simple MOD10 for now.
             $card_number_checksum = '';
             foreach (str_split(strrev((string)$value)) as $i => $d) {
