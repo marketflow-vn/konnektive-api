@@ -1,4 +1,2 @@
 <?php
-return [
-  getenv('KNK_TEST_CARDS')
-];
+return getenv('KNK_TEST_CARDS');
