@@ -63,6 +63,7 @@ class ImportOrderRequest extends Request
         'sessionId'          => 'max:40',
         'product1_price'     => 'numeric',
         'product1_shipPrice' => 'numeric',
+        'browserData'        => 'array',
     ];
 
     public function rules()
