@@ -13,7 +13,7 @@ class Response
     public $message;
     public $raw;
 
-    protected $successCodes = ["SUCCESS"];
+    protected $successCodes = ["SUCCESS", "MERC_REDIRECT"];
 
     public function __construct($rawResponse)
     {
