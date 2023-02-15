@@ -44,7 +44,7 @@ class ImportOrderRequest extends Request
         'lastName'           => 'required|max:50',
         'ipAddress'          => 'max:15',
         'postalCode'         => 'required|max:20',
-        'state'              => 'max:6',
+        'state'              => 'string|max:6',
         'errorRedirectsTo'   => 'max:300',
         'redirectsTo'        => 'max:300',
         'orderId'            => 'max:30',
